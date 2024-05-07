@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARRY POTTER</title>
+    <style>
+        .board{
+            height: 630px;
+            width: 850px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+            left: 420px;
+            top: 100px;
+            
+        }
+        .card{
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            background-color: cyan;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+            background-color: white;
+        }
+
+        .card-face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .front {
+            transform: rotateY(0deg);
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+        .img{
+            height: 200px;
+            width: auto;
+        }
+        .heading{
+            text-align: center;
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            position: absolute;
+            width: 100%;
+
+        }
+        .bgimg{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+        }
+        #backgroundimg{
+            height: auto;
+            width: 100%;
+            position: absolute;
+        }
+        .controlbox{
+            position: absolute;
+            height: 220px;
+            width: 220px;
+            background-color: white;
+            opacity: 0.5;
+            border: solid 2px black;
+            border-radius: 15px;
+            top: 150px;
+            left: 120px;
+        }
+        .instrxnbox{
+            position: absolute;
+            height: 450px;
+            width: 230px;
+            background-color: white;
+            opacity: 0.6;
+            border: black solid 2px;
+            border-radius: 15px;
+            top: 150px;
+            right: 20px;
+            text-align: center;
+        }
+        .instH{
+            text-align: center;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgimg">
+        <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\background 1.jpg" id="backgroundimg">
+    </div>
+    <h2 class="heading">Tap on the cards to flip them</h2>
+    <div class="board">
+
+        <!-- card 1 goes here -->
+    <div class="card" id="flip-card">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\dumbledore.png" class="img">
+            </div>
+        </div>
+    </div>
+        <!-- card 1.0 goes here -->
+    <div class="card" id="flip-card1.0">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\dumbledore.png" class="img">
+            </div>
+        </div>
+    </div>
+
+    <!-- card 2 goes here -->
+    <div class="card" id="flip-card2">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\hermione.jpg" class="img">
+            </div>
+        </div>
+    </div>
+        <!-- card 2.0 goes here -->
+    <div class="card" id="flip-card2.0">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\hermione.jpg" class="img">
+            </div>
+        </div>
+    </div>
+
+    <!-- card 3 goes here -->
+    <div class="card" id="flip-card3">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\harry.jpg" class="img">
+            </div>
+        </div>
+    </div>
+        <!-- card 3.0 goes here -->
+    <div class="card" id="flip-card3.0">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\harry.jpg" class="img">
+            </div>
+        </div>
+    </div>
+
+    <!-- card 4 goes here -->
+    <div class="card" id="flip-card4">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\harrylime.jpg" class="img">
+            </div>
+        </div>
+    </div>
+        <!-- card 4.0 goes here -->
+    <div class="card" id="flip-card4.0">
+        <div class="card-inner">
+            <div class="card-face front">
+                
+            </div>
+            <div class="card-face back">
+                <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\harrylime.jpg" class="img">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="controlbox">     
+    </div>
+    <div class="instrxnbox"> 
+        <h2 class="instH"><b>INSTRUCTIONS</b></h2> 
+        Click on the card to flip it  
+        <br>You have to match 2 cards 
+        <br>Keep repeating the process to win 
+    </div>
+    <script>
+
+            var a1 = document.getElementById('flip-card');
+            var a2 = document.getElementById('flip-card1.0');
+            var a3 = document.getElementById('flip-card2');
+            var a4 = document.getElementById('flip-card2.0');
+            var a5 = document.getElementById('flip-card3');
+            var a6 = document.getElementById('flip-card3.0');
+            var a7 = document.getElementById('flip-card4');
+            var a8 = document.getElementById('flip-card4.0');
+
+            let match1 = [a1 , a2];
+            let match2 = [a3 , a4];
+            let match3 = [a5 , a6];
+            let match4 = [a7 , a8];
+
+            let allmatches = [match1 , match2 , match3 , match4];
+            const cards = document.querySelectorAll('.card');
+
+            let SelectedCards = [];
+        
+            cards.forEach(card => {
+                card.addEventListener('click', function(){
+                    if (!this.classList.contains("flipped") && SelectedCards.length < 2){
+                        this.classList.toggle("flipped");
+                        SelectedCards.push(this);
+
+                        if (SelectedCards.length == 2){
+                            const [card1 ,card2] = SelectedCards;
+
+                            let ismatch = allmatches.some(match => match.includes(card1) && match.includes(card2));
+                            if(ismatch){
+                                SelectedCards = [];
+                            
+
+                                let allmatchesfound = allmatches.every(match => match.every(card => card.classList.contains('flipped')))
+                                setTimeout(() => {
+                                    if (allmatchesfound){
+                                        alert('Congratulations!! you won :)')
+                                    }
+                                },1000)   
+                            }
+                            else {
+                                setTimeout(() => {
+                                    card1.classList.toggle("flipped");
+                                    card2.classList.toggle("flipped");
+                                    SelectedCards = [];
+                                }, 1000)
+                            }
+                        }
+                    };
+                });
+            });
+    </script>
+</body>
+</html>
