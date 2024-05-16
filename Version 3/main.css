@@ -1,0 +1,363 @@
+.head1{
+    background-image: linear-gradient(to right,cyan,aqua,aquamarine);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+.btn1{
+    position: absolute;
+    right: 250px;
+    top: 100px;
+    height: 30px;
+    width: 120px;
+    border-radius: 50px;
+    background: linear-gradient(to right,darkseagreen,aquamarine,aqua);
+    transition: transform 0.8s ease-in-out;
+}
+.btn1:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+.mmg1{
+    height: 200px;
+    width: 600px;
+    background-color: black;
+    position: relative;
+    left: 200px;
+    bottom: 100px;
+    border-radius: 100px;
+}
+.mmg2{
+    height: 200px;
+    width: 600px;
+    background-color: black;
+    position: relative;
+    left: 400px;
+    bottom: 50px;
+    border-radius: 100px;
+}
+.mmg3{
+    height: 200px;
+    width: 600px;
+    background-color: black;
+    position: relative;
+    left: 600px;
+    border-radius: 100px;
+}
+.d2{
+    background-image: linear-gradient(cyan,aqua,aquamarine); 
+}
+.crc1{
+    background-color: black;
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+    position: relative;
+    left: 1100px;
+    bottom: 700px;
+}
+.toggler{
+    position: absolute;
+    right: 250px;
+}
+#checkbox {
+    display: none;
+}
+.toggler {
+    display: block;
+    width: 120px;
+    height: 30px;
+    border: 2px solid #4672fe;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.ball,
+.sun,
+.moon {
+    position: absolute;
+    top: 90%;
+    transform: translateY(-100%);
+}
+.ball {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #4672fe;
+    border-radius: 50%;
+    left: 1px;
+    z-index: 10;
+    transition: transform .5s ease-in-out;
+}
+.sun {
+    left: 5px;
+}
+.moon {
+    right: 5px;
+}
+#checkbox:checked + .ball {
+    transform: translate(89px, -100%);
+}
+.dropdown{
+    position: relative;
+    background-color: #333;
+    color: #03e9f4;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(black,grey,silver);
+    min-width: 100px;
+    z-index: 1;
+    left: 0px;
+    top: 32px;
+    width: 120px;
+}
+.dropdown:hover .dropdown-content {
+    display: list-item;
+}
+.dropdown-content li {
+    padding: 10px;
+    text-align: center;
+}
+.dropdown-content a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.mmg1{
+    color: #fff;
+    font-size: 25px;
+    font-family: cursive;
+    position: relative;
+    text-align: center;
+    
+}
+.mmg2{
+    color: #fff;
+    font-size: 23px;
+    font-family: cursive;
+    position: relative;
+    text-align: center;
+    
+}
+.mmg3{
+    color: #fff;
+    font-size: 22px;
+    font-family: cursive;
+    position: relative;
+    text-align: center;
+    
+}
+.circimg1{
+    height: 160px;
+    width: 160px;
+    border-radius: 80px;
+    position: absolute;
+    left: 208px;
+    bottom: -388px;
+    opacity: 0.5;
+    transition: transform 1s ease;
+}
+.circimg2{
+    height: 160px;
+    width: 160px;
+    border-radius: 80px;
+    position: absolute;
+    left: 408px;
+    bottom: -638px;
+    opacity: 0.5;
+    transition: transform 1s ease;
+}
+.circimg3{
+    height: 160px;
+    width: 160px;
+    border-radius: 80px;
+    position: absolute;
+    left: 608px;
+    bottom: -888px;
+    opacity: 0.5;
+    transition: transform 1s ease;
+}
+.circimg1:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+.circimg2:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+.circimg3:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+.mmg1:hover{
+    cursor: pointer;  
+    background-image: linear-gradient(red,black);
+    color: cyan;
+}
+.mmg2:hover{
+    cursor: pointer;
+    background-image: linear-gradient(black,blue);
+    color: red;
+}
+.mmg3:hover{
+    cursor: pointer;
+    background-image: linear-gradient(blue,red);
+    color: lime;
+}
+.bigcircimg{
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+}
+.maingames{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.game1{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+    
+}
+.game2{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+}
+.game3{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+}
+.game4{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: transparent;
+}
+.g1img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    position: relative;
+    left: 50px;
+    transition: transform 0.8s ease-in;
+}
+.g1img:hover{
+    transform: scale(1.1);
+}
+.g2img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    position: relative;
+    left: 50px;
+    transition: transform 0.8s ease-in;
+}
+.g2img:hover{
+    transform: scale(1.1);
+}
+.g3img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    position: relative;
+    left: 50px;
+    transition: transform 0.8s ease-in;
+}
+.g3img:hover{
+    transform: scale(1.1);
+}
+.g4img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    position: relative;
+    left: 50px;
+    transition: transform 0.8s ease-in;
+}
+.g4img:hover{
+    transform: scale(1.1);
+}
+.gameheadings{
+    background-image: linear-gradient(to right,brown,red,yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+.btng{
+    height: 30px;
+    width: 120px;
+    border-radius: 50px;
+    background: linear-gradient(to right,darkseagreen,aquamarine,aqua);
+    transition: transform 0.8s ease-in;
+    position: relative;
+    left: 90px;
+}
+.btng:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+/* Responsive web design */ 
+
+@media (max-width:1200px)
+{
+    .maingames{
+        flex-direction: column;
+    }
+    .mmg1{
+        height: 600px;
+        width: 200px;
+    }
+    .mmg2{
+        height: 600px;
+        width: 200px;
+    }
+    .mmg3{
+        height: 600px;
+        width: 200px;
+    }
+    .circimg1{
+        left: 40px;
+        bottom: -600px;
+    }
+    .circimg2{
+        left: 80px;
+        bottom: -1200px;
+    }
+    .circimg3{
+        left: 120px;
+        bottom: -1800px;
+    }
+    .crc1{
+        position: relative;
+        left: 520px;
+        bottom: 2000px;
+    }
+}
