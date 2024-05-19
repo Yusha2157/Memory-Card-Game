@@ -154,27 +154,50 @@
     <button id="btn">&#128065;</button>
   </div>
   <script>
-    var a = document.getElementById('btn');
-    var b = document.getElementById('pass');
-    a.addEventListener('mousedown',function(){
-      if (b.type === 'password'){
-        b.type = 'text'
+    var btn = document.getElementById('btn');
+    var pass = document.getElementById('pass');
+    btn.addEventListener('mousedown', function () {
+      if (pass.type === 'password') {
+        pass.type = 'text';
       }
-      else {
-        b.type = 'text'
+      btn.classList.add('clicked');
+    });
+    btn.addEventListener('mouseup', function () {
+      if (pass.type === 'text') {
+        pass.type = 'password';
       }
-      a.classList.toggle('clicked')
-    })
-    a.addEventListener('mouseup',function(){
-      if (b.type === 'text'){
-        b.type = 'password'
-      }
-      else{
-        b.type = 'password'
-      }
-      a.classList.toggle('clicked')
-    })
+      btn.classList.remove('clicked');
+    });
 
-    
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('pass').value;
+
+      if (username === "" || password === "") {
+        alert("All fields must be filled out");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long");
+        return false;
+      }
+
+      // Simple login simulation
+      if (username === "user" && password === "password") {
+        alert("Login successful!");
+        return true;
+      } else {
+        alert("Invalid username or password");
+        return false;
+      }
+    }
+
+    function forgotPassword() {
+      var email = prompt("Please enter your email address:");
+      if (email) {
+        alert("A password reset link has been sent to " + email);
+      }
+    }
   </script>
 </body></html>
