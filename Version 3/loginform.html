@@ -123,7 +123,7 @@
     </head>
     <body>
       
-        <img src="C:\Users\hp\OneDrive\Desktop\Memory card game\main project\images\wp11654637-minecraft-cartoon-wallpapers.png" class="bgimg">
+        <img src="image\wp11654637-minecraft-cartoon-wallpapers.png" class="bgimg">
     <div class="login-box">
     <h2>Login From</h2>
     <form>
@@ -150,31 +150,64 @@
         <span></span>
         SIGN UP
       </a>    
+      <a href="#" onclick="forgotPassword()">Forgot Password?</a>
     </form>
     <button id="btn">&#128065;</button>
   </div>
-  <script>
-    var a = document.getElementById('btn');
-    var b = document.getElementById('pass');
-    a.addEventListener('mousedown',function(){
-      if (b.type === 'password'){
-        b.type = 'text'
-      }
-      else {
-        b.type = 'text'
-      }
-      a.classList.toggle('clicked')
-    })
-    a.addEventListener('mouseup',function(){
-      if (b.type === 'text'){
-        b.type = 'password'
-      }
-      else{
-        b.type = 'password'
-      }
-      a.classList.toggle('clicked')
-    })
+   <script>
+        var btn = document.getElementById('btn');
+        var pass = document.getElementById('pass');
+        btn.addEventListener('mousedown', function () {
+            if (pass.type === 'password') {
+                pass.type = 'text';
+            }
+            btn.classList.add('clicked');
+        });
+        btn.addEventListener('mouseup', function () {
+            if (pass.type === 'text') {
+                pass.type = 'password';
+            }
+            btn.classList.remove('clicked');
+        });
 
-    
-  </script>
-</body></html>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('pass').value;
+
+            if (username === "" || password === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            // Simple login simulation
+            if (username === "user" && password === "password") {
+                alert("Login successful!");
+                return true;
+            } else {
+                alert("Invalid username or password");
+                return false;
+            }
+        }
+
+        function forgotPassword() {
+            var email = prompt("Please enter your email address:");
+            if (email && isValidEmail(email)) {
+                alert("A password reset link has been sent to " + email);
+            } else if (email) {
+                alert("Please enter a valid email address.");
+            }
+        }
+
+        function isValidEmail(email) {
+            // Basic email validation regex
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
